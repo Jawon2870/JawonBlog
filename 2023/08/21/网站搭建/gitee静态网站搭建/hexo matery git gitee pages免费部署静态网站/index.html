@@ -1,0 +1,1564 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><!-- hexo injector head_begin start --><link href="/css/hexo-widget-tree.css" rel="stylesheet"/><!-- hexo injector head_begin end -->
+    <meta charset="utf-8">
+    <meta name="keywords" content="hexo matery git gitee pages免费部署静态网站, keywords">
+    <meta name="description" content="搭建参考
+​	搭建这个博客我都参考了以下资料，虽然搭建的过程中遇到很多的问题，但都是可以通过查阅资料解决的，可以说搭建这个静态博客只是个时间问题。
+B站教程
+​	UP主&amp;quot;DID 迪&amp;quot;的视频教程，演示了使用hexo + m">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>hexo matery git gitee pages免费部署静态网站 | Jawon&#39;s Blog</title>
+    <link rel="icon" type="image/png" href="../../../../../../medias/icons/favicon.png">
+    
+    <script>
+        
+            var backgroundUrl = "../../../../../../medias/background/" + Math.floor(Math.random() * 4) + '.jpg';
+        
+
+        var bodyStyle = document.createElement('style');
+        bodyStyle.innerHTML = 
+            `body{
+                background-image: url('` + backgroundUrl + `');
+                background-repeat:no-repeat;
+                background-size: 100% 100%;
+                background-attachment:fixed;
+            }`;
+        document.head.appendChild(bodyStyle);
+
+    </script>
+    <style>
+
+    </style>
+
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="../../../../../../libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="../../../../../../libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="../../../../../../libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="../../../../../../libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="../../../../../../libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="../../../../../../css/matery.css">
+<link rel="stylesheet" type="text/css" href="../../../../../../css/my.css">
+<link rel="stylesheet" type="text/css" href="../../../../../../css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="../../../../../../libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="../../../../../../css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="../../../../../../css/reward.css">
+    
+
+
+    <script src="../../../../../../libs/jquery/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../../../../../../libs/katex/katex.min.css"/>
+    <link rel="stylesheet" href="../../../../../../css/scroll.css"/>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo on-mobile nav-item">
+                <a href="../../../../../../about" class="waves-effect waves-light">
+                    
+                    <img src="../../../../../../medias/icons/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Jawon</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="../../../../../../index.html" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="../../../../../../archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="../../../../../../galleries" class="waves-effect waves-light">
+      
+      <i class="fas fa-image" style="zoom: 0.6;"></i>
+      
+      <span>相册</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="../../../../../../musics" class="waves-effect waves-light">
+      
+      <i class="fas fa-music" style="zoom: 0.6;"></i>
+      
+      <span>音乐</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="../../../../../../movies" class="waves-effect waves-light">
+      
+      <i class="fas fa-film" style="zoom: 0.6;"></i>
+      
+      <span>视频</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="../../../../../../contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="../../../../../../state" class="waves-effect waves-light">
+      
+      <i class="far fa-edit" style="zoom: 0.6;"></i>
+      
+      <span>动态</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="../../../../../../friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友链</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="../../../../../../about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()">
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+      亮/暗
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="../../../../../../medias/icons/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Jawon</div>
+        <div class="logo-desc">
+            
+            Jawon&#39;s Blog
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="../../../../../../index.html" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="../../../../../../archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="../../../../../../galleries" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-image"></i>
+			
+			相册
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="../../../../../../musics" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-music"></i>
+			
+			音乐
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="../../../../../../movies" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-film"></i>
+			
+			视频
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="../../../../../../contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="../../../../../../state" class="waves-effect waves-light">
+			
+			    <i class="fa-fw far fa-edit"></i>
+			
+			动态
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="../../../../../../friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友链
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="../../../../../../about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+    
+</header>
+
+<script>
+    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    if (!isMobile) {   // 手机模式下不隐藏导航栏
+        // 无操作1秒后自动隐藏导航栏
+        var startAutoHide = true;  // 导航栏未隐藏时停止检测
+        function autoHideBar() {
+            if(startAutoHide)startAutoHide = false;
+            else return;
+            setTimeout(() => {
+                startAutoHide = true;   // 只有这个定时器使用后，才允许开启下一个定时器。
+                scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                // 如果页面下翻超过 70px 并且鼠标不在导航栏上就隐藏导航栏
+                if(scrollTop > 70 && mouse_Y > 64){
+                    document.querySelector('.navbar-fixed').style.top = "-64px";
+                }
+                // 如果页面下翻超过 70px 并且鼠标在导航栏上就在1秒后再次自动隐藏
+                else if(scrollTop > 70){
+                    autoHideBar();
+                }
+            }, 1000);
+        }
+    
+        //修改: 向上滚动自动隐藏导航栏
+        var scrollTop = 0;
+        var lastScrollTop = 0;
+        var scroOffset = 30;    // 滚动距离超过偏移量后生效
+        var navbar = document.querySelector('.navbar-fixed');
+        navbar.style.transition = "top .3s ease";
+        window.addEventListener('scroll', function() {
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > 70 && scrollTop > lastScrollTop + scroOffset) {
+                document.querySelector('.navbar-fixed').style.top = "-64px";
+                lastScrollTop = scrollTop;
+            } else if(scrollTop < 70 || scrollTop < lastScrollTop - scroOffset) {
+                document.querySelector('.navbar-fixed').style.top = "0px";
+                lastScrollTop = scrollTop;
+                autoHideBar();
+            }
+        });    
+        // 鼠标靠近上边缘显示导航栏
+        var mouse_Y = 0;
+        window.addEventListener('mousemove', function(event) {
+            mouse_Y = event.clientY;
+            if (mouse_Y < 10) {
+                document.querySelector('.navbar-fixed').style.top = "0px";
+                autoHideBar();
+            }
+        });
+    }
+</script>
+    
+
+
+
+<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('../../../../../../medias/featureimages/3.jpg')"> -->
+<div class="bg-cover pd-header post-cover">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">hexo matery git gitee pages免费部署静态网站</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <!-- 去除标签分类的显示 -->
+            <!-- <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="../../../../../../categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" class="post-category">
+                                网站搭建
+                            </a>
+                        
+                            <a href="../../../../../../categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/gitee%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" class="post-category">
+                                gitee静态网站搭建
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div> -->
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-08-21
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2024-05-22
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    384
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    1 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="../../../../../../libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1>搭建参考</h1>
+<p>​	搭建这个博客我都参考了以下资料，虽然搭建的过程中遇到很多的问题，但都是可以通过查阅资料解决的，可以说搭建这个静态博客只是个时间问题。</p>
+<h2 id="B站教程">B站教程</h2>
+<p>​	UP主&quot;DID 迪&quot;的视频教程，演示了使用hexo + matery + git + github从零到一搭建一个博客，对我帮助非常大，我已经将他和另一位UP主放入我的友链啦！</p>
+<p>视频地址： <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Eg41157tL/?spm_id_from=333.999.top_right_bar_window_history.content.click&amp;vd_source=866132c04f0a5e79ea65e139473f969c">教程]Hexo &amp; Github搭建自己的专属博客_哔哩哔哩_bilibili</a></p>
+<p>他的博客： <a target="_blank" rel="noopener" href="https://did321.gitee.io/">WD’s blog (gitee.io)</a></p>
+<h2 id="CSDN教程">CSDN教程</h2>
+<p>​	“前端开心果” 在CDSN发布了将 hexo部署到gitee pages的图文教程，非常详细。 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_38157825/article/details/112783631?ops_request_misc=&amp;request_id=b65d2bb25b00439cb27d6b02400a6dc7&amp;biz_id=&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~blog~koosearch~default-1-112783631-null-null.268%5Ev1%5Econtrol&amp;utm_term=hexo&amp;spm=1018.2226.3001.4450">Hexo 部署到 Gitee_hexo gitee_前端开心果的博客-CSDN博客</a></p>
+<p>他的博客：<a target="_blank" rel="noopener" href="https://dulily.gitee.io/">https://dulily.gitee.io/</a></p>
+<h2 id="Hexo-和-matery官方文档">Hexo 和 matery官方文档</h2>
+<p>​	在配置编辑博客内容和修改博客样式的过程中查阅官方资料是很有用的。</p>
+<p>Hexo官网： <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a></p>
+<p>matery官网：<a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">https://github.com/blinkfox/hexo-theme-matery</a></p>
+<h2 id="其他工具">其他工具</h2>
+<p>Google</p>
+<p>bing AI  <a target="_blank" rel="noopener" href="https://www.bing.com/search?q=Bing+AI&amp;showconv=1&amp;FORM=hpcodx">Bing AI - 搜索</a> （需要梯子和微软账号），他现在集成了GPT4，而且免费，帮我写了不少代码。</p>
+<p>VSCode，目前用过最好的编辑器。</p>
+<h1>总结</h1>
+<p>​	整个过程大部分时间都用在编辑博客内容和修改样式了，都是一些基本的html、css、js，总共耗时一星期左右。遇到解决不了问题的就去google搜、去问bing AI、去查官方文档，总会解决的。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <i class="fas fa-exclamation-circle"></i>
+            版权声明：原创作品，未经作者
+            <span class="reprint-info">
+                <a href="../../../../../../about" rel="external nofollow noreferrer">Jawon</a>
+            </span>
+            允许，禁止转载。
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                <!-- 去除标签显示 -->
+                <!-- 
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                     -->
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="../../../../../../libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,wechat,qzone,weibo" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="../../../../../../libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+                <span style="float:right;">分享至:</span>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-medium waves-effect waves-light red">打赏博主</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">感谢您的打赏！</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="../../../../../../medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="../../../../../../medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .twikoo-card {
+        margin: 1.5rem auto;
+    }
+
+    .twikoo-card .card-content {
+        padding: 20px;
+    }
+
+    #tcomments textarea {
+        box-sizing: border-box;
+        background: url("../../../../../../index.html") 100% 100% no-repeat;
+    }
+
+    #tcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #tcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #tcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #tcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #tcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #tcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #tcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #tcomments ul li {
+        list-style-type: disc;
+    }
+
+    #tcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #tcomments table,
+    th,
+    td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #tcomments table,
+    th,
+    td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fafafa;
+    }
+
+    #tcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #tcomments table td {
+        min-width: 80px;
+    }
+
+    #tcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #tcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #tcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #tcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #tcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #tcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #tcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #tcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #tcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #tcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #tcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #tcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #tcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #tcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #tcomments [type="checkbox"]:not(:checked),
+    [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #tcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #tcomments dfn {
+        font-style: italic;
+    }
+
+    #tcomments small {
+        font-size: 85%;
+    }
+
+    #tcomments cite {
+        font-style: normal;
+    }
+
+    #tcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #tcomments table,
+    th,
+    td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fafafa;
+    }
+
+    #tcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #tcomments table td {
+        min-width: 80px;
+    }
+
+    #tcomments [type="checkbox"]:not(:checked),
+    [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card twikoo-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div class="card-content" style="display: grid">
+        <div id="tcomments"></div>
+    </div>
+</div>
+
+<script src="../../../../../../libs/twikoo/twikoo.all.min.js"></script>
+<script>
+    // console.log()
+    twikoo.init({
+        envId: 'https://twikoo-gules-psi.vercel.app',
+        el: '#tcomments',
+        region: '',
+        path: ''
+    }).then(function () {
+        var tkInputs = document.querySelector('#twikoo').getElementsByTagName('input');
+        for (var tkInputsIndex = 0; tkInputsIndex < tkInputs.length; tkInputsIndex++) {
+            if (tkInputs[tkInputsIndex]) {
+                tkInputs[tkInputsIndex].classList.add('browser-default');
+            }
+        }
+    });
+</script>
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="../../../../../10/12/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/%E4%BA%91%E5%87%BD%E6%95%B0%E6%90%AD%E5%BB%BA/nodejs%20express%20github%20zeabur%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E4%BA%91%E5%87%BD%E6%95%B0/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="../../../../../../medias/featureimages/2.jpg" class="responsive-img" alt="nodejs express github zeabur免费部署云函数">
+                        
+                        <span class="card-title">nodejs express github zeabur免费部署云函数</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-10-12
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="../../../../../../categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" class="post-category">
+                                    网站搭建
+                                </a>
+                            
+                            <a href="../../../../../../categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/%E4%BA%91%E5%87%BD%E6%95%B0%E6%90%AD%E5%BB%BA/" class="post-category">
+                                    云函数搭建
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="../../../../14/MarkDown%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/MarkDown%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="../../../../../../medias/featureimages/2.jpg" class="responsive-img" alt="MarkDown语法总结">
+                        
+                        <span class="card-title">MarkDown语法总结</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="../../../../../../categories/MarkDown%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/" class="post-category">
+                                    MarkDown语法总结
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="../../../../../../libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="../../../../../../libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="../../../../../../libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="../../../../../../libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="../../../../../../libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="col l3" style="display: none;">
+    <!-- <div id="toc-aside" class="expanded col l3 hide-on-med-and-down"> -->
+        <div class="toc-widget card">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;大纲</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn">
+<!-- <div id="floating-toc-btn" class="hide-on-med-and-down"> -->
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="../../../../../../libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        /*
+        修改：hexo的渲染引擎由 hexo-renderer-marked 换成 hexo-renderer-markdown-it 后，由于未知原因，
+        h1标题的id无法生成，导致toc中的h1无效，下面为h1添加id
+        */ 
+        var idNum = 1;
+        $("#articleContent h1").each(function() {
+            $(this).attr("id", "h1_title_" + idNum++);
+        });
+        // 修改结束------------------------------------------------------------------------------
+        
+        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        // 手机端的toc索引位置相对于电脑页面的偏移，因为手机端上面有导航栏
+        var mobileOffset1 = 0, mobileOffset2 = 0;
+        if(isMobile){
+            mobileOffset1 = 50;
+            mobileOffset2 = -50;
+        }
+        
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: Number('-200') + mobileOffset1,
+            scrollSmoothOffset: Number('80') + mobileOffset2,
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4, h5'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+
+        // 修改：修复toc点击目录后跳转位置不准确的问题
+        var tocLinks = document.querySelectorAll(".toc-link ");
+        var hrefs = []; // 储存每个a标签的href后面的元素id选择器
+        for (let i = 0; i < tocLinks.length; i++) {
+            var url = tocLinks[i].href;
+            var lastPart = url.split('/').pop();
+            hrefs.push(decodeURIComponent(lastPart));
+            // 为每个a标签添加点击事件，点击后延迟跳转到指定元素的位置
+            tocLinks[i].addEventListener("click",()=>{
+                var element = $(hrefs[i]);
+                // console.log(element)
+                var offset = Number('80') + mobileOffset2;
+                var posTop = element.offset().top + offset;
+                setTimeout(() => {
+                    window.scrollTo({
+                        top: posTop,
+                        behavior: "smooth"
+                    });
+                }, 600);
+            });
+        }
+
+        // 手机端点击 toc 后隐藏 toc，因为手机端 toc 遮住了文章
+        if (isMobile) {
+            let $tocAside = $('#toc-aside');
+            let $mainContent = $('#main-content');
+            var toc_content = document.querySelector("#toc-content");
+            toc_content && toc_content.addEventListener("click", () => {
+                if ($tocAside.hasClass('expanded')) {
+                    $tocAside.removeClass('expanded').hide();
+                    $mainContent.removeClass('l9');
+                } else {
+                    $tocAside.addClass('expanded').show();
+                    $mainContent.addClass('l9');
+                }
+            });
+        }
+
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <!-- 页脚内容 -->
+<footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="../../../../../../libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        font-size: 15px;
+        color: #00e77e;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="8715600286"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#00e77e'
+                   loop='all'
+                   order='list'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="../../../../../../libs/aplayer/APlayer.min.js"></script>
+<script src="../../../../../../libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right" style="text-align: left; width: auto;">
+            <!-- Copyright&nbsp;&copy;
+            
+                <span id="year">2023-2024</span>
+            
+            <a href="../../../../../../about" target="_blank">Jawon</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br> -->
+
+            <!-- 网站运行时间提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2023";
+                        var startMonth = "8";
+                        var startDate = "23";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+                        var diffHours = Math.floor((diff / hours) - (diffYears * 365 + diffDays) * 24);
+                        var diffMinutes = Math.floor((diff / minutes) - ((diffYears * 365 + diffDays) * 24 + diffHours) * 60);
+                        var diffSeconds = Math.floor((diff / seconds) - (((diffYears * 365 + diffDays) * 24 + diffHours) * 60 + diffMinutes) * 60);
+
+                        yearsAndDaysTip = '本站已正常运行 ' + diffYears + ' 年 ' + diffDays + ' 天' + diffHours + ' 小时 ' + diffMinutes + ' 分钟 ' + diffSeconds + ' 秒';
+                        document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+
+                        setInterval(() => {
+                            diffSeconds++;
+                            if(diffSeconds == 60){
+                                diffSeconds = 0;
+                                diffMinutes++;
+                                if(diffMinutes == 60){
+                                    diffMinutes = 0;
+                                    diffHours++;
+                                    if(diffHours == 24){
+                                        diffHours = 0;
+                                        diffDays++;
+                                        if(diffDays == 365){
+                                            diffDays = 0;
+                                            diffYears++;
+                                        }
+                                    }
+                                }
+                            }
+                            yearsAndDaysTip = '本站已正常运行 ' + diffYears + ' 年 ' + diffDays + ' 天' + diffHours + ' 小时 ' + diffMinutes + ' 分钟 ' + diffSeconds + ' 秒';
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }, 1000);
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+
+            <!-- 站点总字数 -->
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">2.3k</span>
+            
+
+            <!-- busuanzi、总访问量、总访问人数 -->
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- icp备案标志 -->
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('../../../../../../search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+</div>
+
+<script>
+    function switchNightMode() {
+        // $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        //     setTimeout(function () {
+        //         $('body').hasClass('DarkMode')
+        //             ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon'))
+        //             : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+
+        //             setTimeout(function () {
+        //                 $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+        //                     $(this).remove()
+        //                 })
+        //             }, 2e3)
+        //     })
+        // 去除上面的动画效果，直接切换
+        if($('body').hasClass('DarkMode')){
+            $('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')
+        }else{
+            $('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
+        }
+    }
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="../../../../../../libs/materialize/materialize.min.js"></script>
+    <script src="../../../../../../libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="../../../../../../libs/aos/aos.js"></script>
+    <script src="../../../../../../libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="../../../../../../libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="../../../../../../js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+    
+    <script src="../../../../../../libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="../../../../../../libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+    <script type="text/javascript" src="../../../../../../libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="../../../../../../libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<!-- hexo injector body_end start --><script src="/js/hexo-widget-tree.js"></script><div id="widget-tree">
+      <ul>
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="categories/MarkDown%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/">
+          MarkDown语法总结
+        </a>
+      <span class="tree-list-count">1</span><ul class="tree-list-children"><li class="tree-list-item"><a class="tree-list-post-link" href="2023/08/14/MarkDown%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/MarkDown%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/" title="MarkDown语法总结"><i class="post-icon gg-file-document"></i>MarkDown语法总结</a></li></ul></li>
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/">
+          网站搭建
+        </a>
+      <span class="tree-list-count">2</span><ul class="tree-list-children">
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/gitee%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/">
+          gitee静态网站搭建
+        </a>
+      <span class="tree-list-count">1</span><ul class="tree-list-children"><li class="tree-list-item"><a class="tree-list-post-link" href="2023/08/21/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/gitee%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/hexo%20matery%20git%20gitee%20pages%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/" title="hexo matery git gitee pages免费部署静态网站"><i class="post-icon gg-file-document"></i>hexo matery git gitee pages免费部署静态网站</a></li></ul></li>
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/%E4%BA%91%E5%87%BD%E6%95%B0%E6%90%AD%E5%BB%BA/">
+          云函数搭建
+        </a>
+      <span class="tree-list-count">1</span><ul class="tree-list-children"><li class="tree-list-item"><a class="tree-list-post-link" href="2023/10/12/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/%E4%BA%91%E5%87%BD%E6%95%B0%E6%90%AD%E5%BB%BA/nodejs%20express%20github%20zeabur%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E4%BA%91%E5%87%BD%E6%95%B0/" title="nodejs express github zeabur免费部署云函数"><i class="post-icon gg-file-document"></i>nodejs express github zeabur免费部署云函数</a></li></ul></li></ul></li></ul>
+        <div id="widget-tree-button">
+          <i class="gg-chevron-right"></i>
+        </div>
+      </div><!-- hexo injector body_end end --></body>
+
+</html>

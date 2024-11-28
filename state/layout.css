@@ -1,0 +1,179 @@
+#year_bar{
+    width: 7%;
+    height: 427px;
+    padding: 3px 0;
+    overflow-y: auto;
+    display: inline-block;
+    vertical-align: top;
+    margin: 3px 1% 0 4%;
+    box-shadow: none !important;
+}
+
+#year_bar .year{
+    background-color: #fff;
+    border: 1px solid #eee;
+    margin: 5px 10px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgb(0 0 0 / 33%);
+}
+#year_bar .year:hover {
+    color: #fff !important;
+    background: #00479fd1 !important;
+    border: 1px solid #00479fd1 !important;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .25) !important;
+}
+
+body.DarkMode #year_bar .year {
+    background-color: #999;
+    border: 1px solid #999;
+    color: #000;
+    box-shadow: 0 3px 2px rgb(255 255 255 / 30%);
+}
+
+main.container.content{
+    width: 84%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: -10px;
+    height: 0;
+}
+
+#articleContent {
+    height: 445px;
+}
+
+#artDetail .post-info {
+    padding: 7px 20px 0 13px;
+    line-height: 0;
+}
+#fullScreenBtn {
+    float: right;
+    padding: 0 6px;
+    margin-right: -10px;
+}
+
+#fullScreenBtn:hover {
+    background-color: #8888;
+    border: #000 1px solid;
+    border-radius: 5px;
+    margin: -3px -10px 0 0;
+    padding: 3px 6px;
+}
+
+hr.clearfix{
+    margin: 0;
+    border: 0;
+}
+
+#artDetail .article-card-content {
+    padding: 0 10px 10px 10px;
+}
+
+iframe{
+    border: none;
+}
+
+#year_bar .year, #fullScreenBtn, .card.comments {
+    cursor: default;
+}
+
+.card.comments {
+    position: absolute;
+    top: 498px;
+    left: 4%;
+    width: 7%;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    margin: 0;
+    display: inline-block;
+}
+.card.comments:hover {
+    color: #fff;
+    background:#00479fd1;
+    border: 1px solid #00479fd1;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .25);
+}
+body.DarkMode .card.comments {
+    color: #bebfc1;
+}
+
+footer {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 10 !important;
+}
+
+.valine-card, .twikoo-card {
+    display: none;
+}
+
+/* on the phone */
+@media only screen and (max-width: 601px) {
+    #year_bar{
+        width: 15%;
+        height: 565px;
+        padding: 0;
+        margin: 10px 0 0 2%;
+    }
+    
+    #year_bar .year{
+        margin: 5px;
+    }
+
+    main.container.content{
+        width: 80%;
+        margin: 0;
+    }
+    
+    #articleContent {
+        height: 590px;
+    }
+    
+    #artDetail .post-info {
+        padding: 7px 20px 0 13px;
+        line-height: 0;
+    }
+    
+    hr.clearfix{
+        margin: 0;
+        border: 0;
+    }
+    
+    #artDetail .article-card-content {
+        padding: 0px 4px 4px 4px;
+    }
+
+    .info-break-policy {
+        width: fit-content;
+    }
+    
+    #fullScreenBtn {
+        display: none;
+    }
+    
+    #year_bar .year, #fullScreenBtn, .card.comments {
+        cursor: default;
+    }
+    
+    .card.comments {
+        width: 15%;
+        top: 635px;
+        left: 2%;
+    }
+    .card.comments:hover {
+        color: #fff;
+        background:#00479fd1;
+        border: 1px solid #00479fd1;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, .25);
+    }
+    body.DarkMode .card.comments {
+        color: #bebfc1;
+    }
+}

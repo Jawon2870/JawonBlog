@@ -1,0 +1,12 @@
+
+body{
+    background: black;
+    color: white;
+}
+
+#errorTip {
+    display: inline-block;
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+}
