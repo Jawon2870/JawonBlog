@@ -1,1 +1,1 @@
-{"trailingSlash":true}
+{"trailingSlash":true,"rewrites":[{"source":"/:path*/","destination":"/:path*/index.html"}]}
