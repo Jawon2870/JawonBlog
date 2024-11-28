@@ -1,1 +1,1 @@
-{"trailingSlash":true,"rewrites":[{"source":"/:path*/","destination":"/index.html"}]}
+{"rewrites":[{"source":"/:path*/","destination":"/index.html"}],"trailingSlash":true}
