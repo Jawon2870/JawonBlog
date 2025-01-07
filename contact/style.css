@@ -1,4 +1,0 @@
-/* 隐藏信息栏、声明等*/
-.card-content.article-info, #reprint-statement, .tag_share{
-    display: none !important;
-}
