@@ -1,1 +1,16 @@
-{"redirects":[{"source":"/:path*/","destination":"/:path*/index.html","permanent":true}],"rewrites":[{"source":"/:path*/","destination":"/:path*/index.html"}],"trailingSlash":true}
+{
+    "redirects": [
+        {
+            "source": "/:path*/",
+            "destination": "/:path*/index.html",
+            "permanent": true
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/:path*/",
+            "destination": "/:path*/index.html"
+        }
+    ],
+    "trailingSlash": true
+}
