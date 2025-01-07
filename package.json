@@ -12,7 +12,6 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-
     "push": "git add . && git commit -m '1' && git push -f origin master",
     "pull": "git stash && git pull -f origin master && git stash clear"
   },
