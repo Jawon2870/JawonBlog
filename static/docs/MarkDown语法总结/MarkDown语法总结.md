@@ -157,7 +157,7 @@ date: 2023-08-14 23:56:19
 
 使用 html 中 img 标签的方式：\<img src="./view.jpg" alt="view"/>
 
-<img src="./view.jpg" alt="view"/>
+<img src="https://www.jawon.site/MarkDown语法总结/view.jpg" alt="view"/>
 
 ## 插入表格：
 
