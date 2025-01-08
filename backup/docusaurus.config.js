@@ -104,9 +104,41 @@ const config = {
         },
       ],
     },
-    startPath: '/docs/简介',
     footer: {
       style: 'dark',
+      links: [
+        {
+          title: 'Docs',
+          items: [
+            {
+              label: '前言',
+              to: '/docs/前言',
+            },
+          ],
+        },
+        {
+          title: 'Community',
+          items: [
+            {
+              label: 'Discord',
+              href: 'https://discordapp.com/invite/docusaurus',
+            },
+          ],
+        },
+        {
+          title: 'More',
+          items: [
+            {
+              label: 'Blog',
+              to: '/blog',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/Jawon2870/JawonBlog',
+            },
+          ],
+        },
+      ],
       copyright: `Updated at ${new Date().toLocaleDateString().replaceAll('/', ' / ')}.`,
     },
     prism: {
