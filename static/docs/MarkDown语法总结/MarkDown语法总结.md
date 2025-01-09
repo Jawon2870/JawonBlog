@@ -6,7 +6,7 @@ date: 2023-08-14 23:56:19
 ---
 # 软件配置
 
-> 曾经放弃过Typora，但兜兜转转，最后还得是Typora！
+> MarkDown编辑器推荐使用 Typora
 
 ## 1.修改样式
 
@@ -18,7 +18,7 @@ date: 2023-08-14 23:56:19
 在文件->偏好设置->外观->打开主题文件夹，将github-dark.css 放入该文件夹内后重启软件即可。
 ```
 
-### 1.2、导入我修改好的样式
+### 1.2、导入修改好的样式（可跳过）
 
 #### setting-dist文件夹
 
@@ -32,7 +32,7 @@ date: 2023-08-14 23:56:19
 用base-control.css替换 Typora安装路径\resources\app\style\base-control.css
 ```
 
-### 1.3、自定义样式
+### 1.3、自定义样式（可跳过）
 
 ```
 在视图->开发者工具(shift+F12) 调试好css样式后，在调试窗口打开修改好的css文件，右键save as，保存并覆盖 Typora\resources\app\style\themes（有的可能在其他文件夹，例如Typora\resources\app\style\base-control.css）。
@@ -56,7 +56,7 @@ date: 2023-08-14 23:56:19
 
 **注意：只能修改或添加 conf.user.json，不能修改 conf.default.json**
 
-# 文字样式
+# 文本样式
 
 ## 标题 (#~######+空格+标题)
 
@@ -98,9 +98,9 @@ date: 2023-08-14 23:56:19
 
 ## 高亮
 
-> 注意：高亮、图表、内联公式、上下角标需要在偏好设置中的 Markdown 拓展语法中打开并重启 Typora
+\=\===高亮文本==\=\=
 
-\=\===高亮==\=\=
+> 注意：高亮、图表、内联公式、上下角标需要在偏好设置中的 Markdown 拓展语法中打开并重启 Typora。如果编辑器不支持高亮，也可以使用html语法：\<mark><mark>高亮文本</mark>\</mark>
 
 ## 上下角标
 
@@ -157,7 +157,7 @@ date: 2023-08-14 23:56:19
 
 使用 html 中 img 标签的方式：\<img src="./view.jpg" alt="view"/>
 
-<img src="https://www.jawon.site/MarkDown语法总结/view.jpg" alt="view"/>
+<img src="./view.jpg" alt="view"/>
 
 ## 插入表格：
 
