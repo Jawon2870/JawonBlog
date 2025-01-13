@@ -31,7 +31,7 @@ git reset --hard
 
 网络状态：已开启v2ray代理，能正常访问google
 
-问题：git clone <github仓库> 提示无法访问。
+问题：git clone \<github仓库> 提示无法访问。
 
 解决方法：
 

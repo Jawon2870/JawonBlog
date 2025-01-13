@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const sourceFolder = 'test01';
-const destinationFolder = '123/test01';
+const sourceFolder = 'docs';
+const destinationFolder = 'static/docs';
 
 // 删除文件夹
 function deleteFolderRecursive(path) {
