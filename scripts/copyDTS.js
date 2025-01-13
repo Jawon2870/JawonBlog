@@ -1,3 +1,7 @@
+/**
+ * node scripts/copyDTS.js（copy docs folder to staticcopyDTS）
+*/
+
 const fs = require('fs');
 const path = require('path');
 
