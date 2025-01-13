@@ -91,15 +91,15 @@ const config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'right',
-          label: 'Docs',
+          label: '笔记',
         },
         {
           to: '/blog',
-          label: 'Blog',
+          label: '博客',
           position: 'right'
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/Jawon2870/JawonBlog',
           label: 'GitHub',
           position: 'right',
         },
