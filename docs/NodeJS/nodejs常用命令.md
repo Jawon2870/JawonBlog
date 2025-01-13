@@ -1,4 +1,4 @@
-# NodeJS 常用命令总结
+# nodejs 常用命令
 
 ## npm init
 
