@@ -1,4 +1,4 @@
-# Hexo+Gitee pages免费部署博客(已弃用)
+# Hexo+Gitee pages免费部署博客（已弃用）
 
 `<mark>`现已放弃本文方案 `</mark>`，请移步至新的解决方案：使用。。。搭建博客。
 
@@ -41,4 +41,4 @@ UP主"DID 迪"的[视频教程](https://www.bilibili.com/video/BV1Eg41157tL/?spm
 
 目前已经放弃了 Hexo 了，但之前耗费了大量时间调样式，在这里用一张动图记录一下。
 
-![1736789314005](image/Hexo+Giteepages免费部署博客(已弃用)/1736789314005.png)
+![1736848338224](image/Hexo+Giteepages免费部署博客(已弃用)/1736848338224.gif)

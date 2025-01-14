@@ -32,7 +32,7 @@
 /* 以下为自定义样式，覆盖上面的默认样式 */
 
 :root {
-  --ifm-color-primary: #376da5;
+  --ifm-color-primary: #52aaf2;
   --ifm-color-success-dark: var(--ifm-color-primary);
   --blockquote-background-color: rgba(118, 177, 255, 0.1);
   --ifm-color-success-contrast-background: var(--blockquote-background-color);
@@ -40,7 +40,9 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'], html[data-theme='dark'] {
-  --ifm-color-primary: #376da5;
+  --ifm-color-primary: #52aaf2;
+  --ifm-background-color: #000;
+  --ifm-background-surface-color: #222a;
   --ifm-color-success-contrast-background: var(--blockquote-background-color);
 }
 

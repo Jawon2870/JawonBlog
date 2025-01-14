@@ -107,6 +107,19 @@ const config = {
       darkTheme: prismThemes.dracula,
     },
   },
+
+  themes: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      ({
+        hashed: true,
+        language: ["en", "zh"],
+        docsRouteBasePath: "/",
+        highlightSearchTermsOnTargetPage: true,
+        // ignoreFiles: ["感谢名单", "赞助名单"],
+      }),
+    ],
+  ],
 };
 
 export default config;

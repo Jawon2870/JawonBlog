@@ -6,41 +6,29 @@
 
 ##### github-dark.css
 
-```
-在文件->偏好设置->外观->打开主题文件夹，将github-dark.css 放入该文件夹内后重启软件即可。
-```
+在文件->偏好设置->外观->打开主题文件夹，将github-dark.css 放入该文件夹，之后重启 typora 选择该主题。
 
 #### 1.2、导入修改好的样式（可跳过）
 
 ##### setting-dist文件夹
 
-```
 用 setting-dist 文件夹替换 Typora安装路径\resources\app\setting-dist
-```
 
 ##### base-control.css
 
-```
 用base-control.css替换 Typora安装路径\resources\app\style\base-control.css
-```
 
 #### 1.3、自定义样式（可跳过）
 
-```
 在视图->开发者工具(shift+F12) 调试好css样式后，在调试窗口打开修改好的css文件，右键save as，保存并覆盖 Typora\resources\app\style\themes（有的可能在其他文件夹，例如Typora\resources\app\style\base-control.css）。
-```
 
 ### 2.大纲折叠
 
-```
 点击 文件-->偏好设置-->外观-->侧边栏
-```
 
 ### 3. 修改快捷键
 
-```
 进入 文件->偏好设置->通用->打开高级设置，修改conf.user.json即可。
-```
 
 > C:\Users\用户名\AppData\Roaming\Typora\conf\conf.user.json
 
