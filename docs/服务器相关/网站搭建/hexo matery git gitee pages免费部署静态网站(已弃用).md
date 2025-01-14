@@ -1,4 +1,4 @@
-# hexo matery git gitee pages免费部署静态网站
+# hexo matery git gitee pages免费部署静态网站(已弃用)
 
 <mark>现已放弃本文方案</mark>，请移步至新的解决方案：使用。。。搭建博客。
 
@@ -20,7 +20,6 @@
 ```
 UP主"DID 迪"的视频教程，演示了使用hexo + matery + git + github从零到一搭建一个博客 。
 ```
-
 
 视频地址： [教程\]Hexo & Github搭建自己的专属博客_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Eg41157tL/?spm_id_from=333.999.top_right_bar_window_history.content.click&vd_source=866132c04f0a5e79ea65e139473f969c)
 

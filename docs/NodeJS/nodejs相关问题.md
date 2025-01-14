@@ -1,12 +1,6 @@
 # nodejs 相关问题
 
-## npm init
-
-## npm install
-
-## 遇到过的问题
-
-### npm i 报错 npm error code ETIMEDOUT
+## npm i 报错 npm error code ETIMEDOUT
 
 使用 npm i 安装包时长时间无响应后提示 npm error code ETIMEDOUT
 
