@@ -1,9 +1,5 @@
 # MarkDown语法总结
 
-## MarkDown 编辑器
-
-> MarkDown编辑器推荐使用 Typora, VSCode markdown插件推荐使用 Md Editor
-
 ### 1.修改样式
 
 #### 1.1、导入主题文件
@@ -70,7 +66,7 @@
 
 ### 下划线
 
-\<u><u>下划线</u>\</u>
+\<u>`<u>`下划线 `</u>`\</u>
 
 ### 斜体
 
@@ -105,7 +101,7 @@
 
 \=\=高亮文本\=\=，效果：==高亮文本==
 
-> 注意：高亮、图表、内联公式、上下角标需要在偏好设置中的 Markdown 拓展语法中打开并重启 Typora。如果编辑器不支持高亮，也可以使用html语法：\<mark><mark>高亮文本</mark>\</mark>
+> 注意：高亮、图表、内联公式、上下角标需要在偏好设置中的 Markdown 拓展语法中打开并重启 Typora。如果编辑器不支持高亮，也可以使用html语法：\<mark>`<mark>`高亮文本 `</mark>`\</mark>
 
 ### 上下角标
 
@@ -149,8 +145,8 @@
 
 -空格[空格]空格
 
-- [X]  待办一
-- [ ]  待办二
+- [X] 待办一
+- [ ] 待办二
 
 ## 插入元素
 
@@ -158,18 +154,17 @@
 
 直接拖入，即 \!\[tip](url) ：
 
-![1736789394002](images/MarkDown语法总结/1736789394002.png)
+![1736789394002](image/MarkDown语法总结/1736789394002.png)
 
-使用 html 中 img 标签的方式：\<img src="./view.jpg" alt="view"/>
+使用 html 中 img 标签的方式(有些编辑器不支持)：\<img src="./view.jpg" alt="view"/>
 
-<img src="images/MarkDown语法总结/1736789394002.png" alt="view"/>
+<img src="image/MarkDown语法总结/1736789394002.png" alt="view"/>
 
 ### 插入表格：
 
 |空格|空格|空格|回车
 
 > 建议右键插入，然后修改源码
-
 
 | 。。。。 | 。。。 | 。。。 |
 | :------: | :----- | -----: |
@@ -196,17 +191,17 @@ $$
 
 C:
 
-~~~c
+```c
 int main(void)
 {
     printf("Hello word!");
     return 0;
 }
-~~~
+```
 
 JS:
 
-~~~javascript
+```javascript
 (function ($) {
   // Search
   var $searchWrap = $('#search-form-wrap'),
@@ -229,12 +224,12 @@ JS:
     $container.removeClass('mobile-nav-on');
   });
 })(jQuery);
-~~~
+```
 
 ### 插入表情：
 
 :关键词: ([支持的关键词](https://gist.github.com/rxaviers/7360908))
 
-:smile\: :smile:，:sunny\: :sunny:，:rose\: :rose:
+:smile\: 😄，:sunny\: ☀️，:rose\: 🌹
 
 [^2]: 这是一个脚注解释
