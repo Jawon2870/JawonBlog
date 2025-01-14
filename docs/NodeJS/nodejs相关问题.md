@@ -4,7 +4,7 @@
 
 使用 npm i 安装包时长时间无响应后提示 npm error code ETIMEDOUT
 
-![1736737426823](images/nodejs相关问题/1736737426823.png)
+![1736737426823](image/nodejs相关问题/1736737426823.png)
 
 以下方法都尝试过，但仍然报错
 
@@ -20,4 +20,4 @@ npm config delete https-proxy
 
 解决方法：在控制面板->网络和 Internet->网络连接中，双击正在使用的网卡，之后在属性中取消 IPv6
 
-![img](images/nodejs相关问题/1736737335800.png)
+![img](image/nodejs相关问题/1736737335800.png)
