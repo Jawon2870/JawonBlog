@@ -106,6 +106,14 @@ const config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+
+    giscus: {
+      repo: "Jawon2870/JawonBlog",
+      repoId: "R_kgDONV8hTQ",
+      category: 'General',
+      categoryId: "DIC_kwDONV8hTc4Cl9O0",
+    }
+
   },
 
   themes: [
