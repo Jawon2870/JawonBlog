@@ -112,6 +112,7 @@ const config = {
       repoId: "R_kgDONV8hTQ",
       category: 'General',
       categoryId: "DIC_kwDONV8hTc4Cl9O0",
+      lang: "zh-CN",
     }
 
   },
@@ -124,7 +125,6 @@ const config = {
         language: ["en", "zh"],
         docsRouteBasePath: "/",
         highlightSearchTermsOnTargetPage: true,
-        // ignoreFiles: ["感谢名单", "赞助名单"],
       }),
     ],
   ],

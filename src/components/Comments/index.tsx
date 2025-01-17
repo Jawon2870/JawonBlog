@@ -35,7 +35,7 @@ export default function Comments(): JSX.Element {
 
   giscus.theme =
     useColorMode().colorMode === "dark" ? giscus.darkTheme : giscus.theme;
-  giscus.lang = i18n.currentLocale;
+  // giscus.lang = i18n.currentLocale;
 
   return (
     <BrowserOnly fallback={<div>Loading Comments...</div>}>
