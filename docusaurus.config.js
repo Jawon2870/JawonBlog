@@ -114,7 +114,6 @@ const config = {
       categoryId: "DIC_kwDONV8hTc4Cl9O0",
       lang: "zh-CN",
     }
-
   },
 
   themes: [
