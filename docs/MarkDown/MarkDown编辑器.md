@@ -2,7 +2,7 @@
 
 ## 桌面端
 
-桌面端 MarkDown 编辑器推荐使用 Typora
+桌面端 MarkDown 编辑器推荐使用 Typora，[typora破解补丁(解压到安装目录).zip](typora破解补丁(解压到安装目录).zip)
 
 ![1736841534285](image/MarkDown编辑器/1736841534285.png)
 
