@@ -29,13 +29,13 @@ git reset --hard
 
 运行环境：win10
 
-网络状态：已开启v2ray代理，能正常访问google
+网络状态：已开启 v2ray 代理，能正常访问google
 
-问题：git clone \<github仓库> 提示无法访问。
+问题：执行 git clone 或 git push 失败，提示无法访问（fatal: unable to access）。
 
 解决方法：
 
-配置 git 代理（指向代理工具的地址和端口）
+配置 git 代理（配置成代理工具的地址和端口）
 
 git config --global http.proxy 127.0.0.1:10809
 
