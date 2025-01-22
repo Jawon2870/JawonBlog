@@ -1,6 +1,6 @@
-import React, {type ReactNode} from 'react';
+import React, { type ReactNode } from 'react';
 import clsx from 'clsx';
-import {HtmlClassNameProvider, ThemeClassNames} from '@docusaurus/theme-common';
+import { HtmlClassNameProvider, ThemeClassNames } from '@docusaurus/theme-common';
 import {
   BlogPostProvider,
   useBlogPost,
@@ -12,9 +12,11 @@ import BlogPostPageMetadata from '@theme/BlogPostPage/Metadata';
 import BlogPostPageStructuredData from '@theme/BlogPostPage/StructuredData';
 import TOC from '@theme/TOC';
 import ContentVisibility from '@theme/ContentVisibility';
-import type {Props} from '@theme/BlogPostPage';
-import type {BlogSidebar} from '@docusaurus/plugin-content-blog';
-import Comments from '../../components/Comments';
+import type { Props } from '@theme/BlogPostPage';
+import type { BlogSidebar } from '@docusaurus/plugin-content-blog';
+
+// 添加评论组件
+import GiscusComments from '../../components/GiscusComments';
 
 function BlogPostPageContent({
   sidebar,
@@ -23,8 +25,8 @@ function BlogPostPageContent({
   sidebar: BlogSidebar;
   children: ReactNode;
 }): ReactNode {
-  const {metadata, toc} = useBlogPost();
-  const {nextItem, prevItem, frontMatter} = metadata;
+  const { metadata, toc } = useBlogPost();
+  const { nextItem, prevItem, frontMatter } = metadata;
   const {
     hide_table_of_contents: hideTableOfContents,
     toc_min_heading_level: tocMinHeadingLevel,
@@ -50,7 +52,7 @@ function BlogPostPageContent({
         <BlogPostPaginator nextItem={nextItem} prevItem={prevItem} />
       )}
 
-      {<Comments/>}
+      <GiscusComments />
     </BlogLayout>
   );
 }

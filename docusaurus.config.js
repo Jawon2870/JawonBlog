@@ -85,11 +85,11 @@ const config = {
           position: 'right',
           label: '笔记',
         },
-        {
-          to: '/blog',
-          label: '博客',
-          position: 'right'
-        },
+        // {
+        //   to: '/blog',
+        //   label: '博客',
+        //   position: 'right'
+        // },
         {
           href: 'https://github.com/Jawon2870/JawonBlog',
           label: 'GitHub',
