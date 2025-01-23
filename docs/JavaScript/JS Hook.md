@@ -4,7 +4,7 @@
 
 ### 简单钩子
 
-下面是一个简单的函数钩子，演示了为 console.log 添加钩子，劫持 log 消息。
+下面是一个简单的函数钩子，为 console.log 添加钩子，劫持 log 消息。
 
 ```javascript
 let originalLog = console.log;
@@ -14,7 +14,7 @@ console.log = function(msg){
 }
 ```
 
-添加钩子后执行 console.log('Hi')，发现控制台输出 Hi 之前出现了 alert 弹窗，点击确定之后控制台才出现 Hi
+添加钩子后执行 console.log('Hi')，发现控制台输出 Hi 之前出现了 alert 弹窗，点击确定之后控制台才输出 Hi
 
 ![1737614049138](image/JSHook/1737614049138.png)
 

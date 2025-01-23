@@ -56,7 +56,10 @@ const config = {
           onUntruncatedBlogPosts: 'warn',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: [
+            './src/css/colors.css',
+            './src/css/layout.css',
+          ],
         },
       }),
     ],
