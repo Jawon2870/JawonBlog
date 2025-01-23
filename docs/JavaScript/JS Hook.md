@@ -50,12 +50,11 @@ class Hook {
             if (typeof hook.before === "function") {
                 newArgs = hook.before.apply(this, arguments);
             }
+            let result = originalFunc.apply(this, newArgs || arguments);
             if (typeof hook.after === "function") {
-                setTimeout(() => {
-                    hook.after.apply(this, newArgs || arguments);
-                });
+                hook.after.apply(this, newArgs || arguments);
             }
-            return originalFunc.apply(this, newArgs || arguments);
+            return result;
         };
     }
 
@@ -80,7 +79,6 @@ class Hook {
 用法：
 
 ```javascript
-// Usage example:
 let hook = new Hook();
 
 hook.set(
@@ -96,15 +94,23 @@ hook.set(
     }
 );
 
-console.log("Hello!");
+console.log("Hello");
+
+hook.unset(console, "log");
+
+console.log("Hello");
 ```
 
 执行过程：
 
 alert 弹窗在控制台输出 Hello 之前出现
 
-![1737614837665](image/JSHook/1737614837665.png)
+![1737615878799](image/JSHook/1737615878799.png)
 
 点击确定后控制台输出被劫持过的 Hello，之后 alert 弹窗显示劫持过的 Hello。
 
-![1737614957694](image/JSHook/1737614957694.png)
+![1737615913402](image/JSHook/1737615913402.png)
+
+点击确定后钩子被取消，控制台正常输出 Hello
+
+![1737615988226](image/JSHook/1737615988226.png)

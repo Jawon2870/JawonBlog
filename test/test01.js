@@ -25,12 +25,11 @@ class Hook {
             if (typeof hook.before === "function") {
                 newArgs = hook.before.apply(this, arguments);
             }
+            let result = originalFunc.apply(this, newArgs || arguments);
             if (typeof hook.after === "function") {
-                setTimeout(() => {
-                    hook.after.apply(this, newArgs || arguments);
-                });
+                hook.after.apply(this, newArgs || arguments);
             }
-            return originalFunc.apply(this, newArgs || arguments);
+            return result;
         };
     }
 
@@ -67,4 +66,8 @@ hook.set(
     }
 );
 
-console.log("Hello!"); // alerts "[Before] Hello!" and then "[After] Hello!"
+console.log("Hello");
+
+hook.unset(console, "log");
+
+console.log("Hello");
