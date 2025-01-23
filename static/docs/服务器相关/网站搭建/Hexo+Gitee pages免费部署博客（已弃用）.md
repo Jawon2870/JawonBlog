@@ -1,6 +1,6 @@
 # Hexo+Gitee pages免费部署博客（已弃用）
 
-<mark>现已放弃本文方案 </mark>，请移步至新的解决方案：使用。。。搭建博客。
+<mark>本文方案已弃用</mark>，请移步至新的解决方案：[docusaurus+github+vercel免费部署博客](docusaurus+github+vercel免费部署博客)。
 
 之前选择本文中的方案，源于以下优点：
 
