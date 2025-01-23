@@ -1,3 +1,4 @@
-.gsc-main {
-    gap: 1rem;
+#comments {
+    display: block;
+    margin-top: 3rem;
 }
