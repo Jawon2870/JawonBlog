@@ -84,6 +84,7 @@ const config = {
           sidebarId: 'tutorialSidebar',
           position: 'right',
           label: '笔记',
+          to: '/docs/简介',
         },
         // {
         //   to: '/blog',
