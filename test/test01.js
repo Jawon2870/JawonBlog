@@ -1,28 +1,3 @@
-# JS Hook
-
-## JS 函数钩子
-
-### 简单钩子
-
-下面是一个简单的函数钩子，演示了为 console.log 添加钩子，劫持 log 消息。
-
-```javascript
-let originalLog = console.log;
-console.log = function(msg){
-    alert('hooked msg: ' + msg);
-    return originalLog.apply(this, arguments);
-}
-```
-
-添加钩子后执行 console.log('Hi')，发现控制台输出 Hi 之前出现了 alert 弹窗，点击确定之后控制台才出现 Hi
-
-![1737614049138](image/JSHook/1737614049138.png)
-
-### 钩子封装
-
-基于简单函数钩子的原理，将其封装成类，统一管理钩子的挂载、删除、获取和重置。
-
-```javascript
 class Hook {
     constructor() {
         this.hooks = [];
@@ -75,11 +50,7 @@ class Hook {
         this.hooks = [];
     }
 }
-```
 
-用法：
-
-```javascript
 // Usage example:
 let hook = new Hook();
 
@@ -96,15 +67,4 @@ hook.set(
     }
 );
 
-console.log("Hello!");
-```
-
-执行过程：
-
-alert 弹窗在控制台输出 Hello 之前出现
-
-![1737614837665](image/JSHook/1737614837665.png)
-
-点击确定后控制台输出被劫持过的 Hello，之后 alert 弹窗显示劫持过的 Hello。
-
-![1737614957694](image/JSHook/1737614957694.png)
+console.log("Hello!"); // alerts "[Before] Hello!" and then "[After] Hello!"

@@ -19,7 +19,7 @@ const config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
- 
+
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Jawon', // Usually your GitHub org/user name.
@@ -84,8 +84,8 @@ const config = {
           sidebarId: 'tutorialSidebar',
           position: 'right',
           label: '笔记',
-          to: '/docs/简介',
-        },
+          to: '/docs',
+      },
         // {
         //   to: '/blog',
         //   label: '博客',
