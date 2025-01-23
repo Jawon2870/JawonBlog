@@ -13,24 +13,12 @@ const config = {
   title: "Jawon's blog",
   tagline: 'Welcome!',
   favicon: 'img/favicon.png',
-
-  // Set the production url of your site here
   url: 'https://www.Jawon.site',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Jawon', // Usually your GitHub org/user name.
-  projectName: 'Jawon-Blog', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'zh',
     locales: ['zh', 'en'],

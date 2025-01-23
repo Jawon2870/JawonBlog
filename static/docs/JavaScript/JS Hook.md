@@ -12,15 +12,17 @@ console.log = function(msg){
     alert('hooked msg: ' + msg);
     return originalLog.apply(this, arguments);
 }
+
+console.log('Hi');
 ```
 
-添加钩子后执行 console.log('Hi')，发现控制台输出 Hi 之前出现了 alert 弹窗，点击确定之后控制台才输出 Hi
+执行以上代码，console.log 已经被劫持了，在控制台输出 Hi 之前出现弹窗，点击确定之后控制台才输出 Hi
 
 ![1737614049138](image/JSHook/1737614049138.png)
 
 ### 钩子封装
 
-基于简单函数钩子的原理，将其封装成类，统一管理钩子的挂载、删除、获取和重置。
+基于以上函数钩子的原理，将其封装成类，统一管理钩子的挂载、删除、获取和重置。
 
 ```javascript
 class Hook {
@@ -103,7 +105,7 @@ console.log("Hello");
 
 执行过程：
 
-alert 弹窗在控制台输出 Hello 之前出现
+成功劫持到 console.log 的参数，在控制台输出 Hello 之前出现弹窗
 
 ![1737615878799](image/JSHook/1737615878799.png)
 
