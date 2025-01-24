@@ -13,6 +13,7 @@
     "@easyops-cn/docusaurus-search-local": "^0.48.0",
     "@giscus/react": "^3.1.0",
     "@mdx-js/react": "^3.0.0",
+    "001": "file:..",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",

@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "node index.js",
     "start": "npm run build && npm run serve",
-    "build": "cd client && npm install && npm run build && cd..",
+    "build": "npm --prefix client install && npm --prefix client run build",
     "push": "git add . && git commit -m '1' && git push -f origin main",
     "pull": "git stash && git pull -f origin main && git stash clear"
   },
