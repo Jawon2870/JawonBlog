@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "serve": "npm run build && node index.js",
+    "serve": "node index.js",
+    "start": "npm run build && npm run serve",
     "build": "npm --prefix client install && npm --prefix client run build",
     "push": "git add . && git commit -m '1' && git push -f origin main",
     "pull": "git stash && git pull -f origin main && git stash clear"
