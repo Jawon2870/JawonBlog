@@ -52,7 +52,7 @@ const config = {
       }),
     ],
   ],
-
+  
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   themeConfig: {
     colorMode: {
@@ -77,11 +77,11 @@ const config = {
           label: '笔记',
           to: '/docs',
         },
-        // {
-        //   to: '/blog',
-        //   label: '博客',
-        //   position: 'right'
-        // },
+        {
+          to: '/blog',
+          label: '博客',
+          position: 'right'
+        },
         {
           href: 'https://github.com/Jawon2870/JawonBlog',
           label: 'GitHub',
@@ -92,7 +92,7 @@ const config = {
     startPath: '/docs/简介',
     footer: {
       style: 'dark',
-      copyright: `Updated at ${new Date().toLocaleDateString().replaceAll('/', ' / ')}.`,
+      copyright: `Copyright © 2025-1-17 ~ ${new Date().toLocaleDateString().replaceAll('/', '-')}. Build with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.oneLight,
