@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "build": "node scripts/copyDTS.js && docusaurus build",
-    "serve": "docusaurus serve"
+    "build": "node scripts/copyDTS.js && docusaurus build"
   },
   "dependencies": {
     "@docusaurus/core": "3.7.0",
