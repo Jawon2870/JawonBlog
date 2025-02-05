@@ -11,8 +11,10 @@ app.use(express.static(path.join(__dirname, '../Blog/build')));
 
 app.get('*', (req, res) => {
     console.log('received URL: ' + hostname + req.url);
+    
+    res.sendFile(path.join(__dirname, '../Blog/build', 'index.html'));
 
-    res.send('<h1 style="text-align:center">404 Not Found</h1>');
+    // res.send('<h1 style="text-align:center">404 Not Found</h1>');
 });
 
 let port = process.env.PORT || 3000;
