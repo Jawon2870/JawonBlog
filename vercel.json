@@ -3,10 +3,7 @@
     "builds": [
         {
             "src": "index.js",
-            "use": "@now/node",
-            "commands": [
-                "./buildBlog.sh"
-            ]
+            "use": "@now/node"
         }
     ],
     "routes": [
