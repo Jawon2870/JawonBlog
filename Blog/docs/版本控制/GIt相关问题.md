@@ -33,7 +33,7 @@ git reset --hard
 
 问题：执行 git clone 或 git push 失败，提示无法访问（fatal: unable to access）。
 
-解决方法：
+#### 解决方法：
 
 配置 git 代理（配置成代理工具的地址和端口）
 
@@ -46,3 +46,14 @@ git config --global https.proxy 127.0.0.1:10809
 git config --global --unset-all http.proxy
 
 git config --global --unset-all https.proxy
+
+### gitignore 没反应
+
+有时候想要让 git 忽略某个目录或文件，例如在 .gitignore 文件中添加 build/ ，但是添加后，build 目录仍然没有被忽略，这是因为该目录在添加到 .gitignore 之前就已经被 git 记录了。
+
+#### 解决方法：
+
+```bash
+# 删除 git 记录，但会保留本地文件
+git rm -r --cached [path]
+```
