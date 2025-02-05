@@ -2,6 +2,13 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
+// 处理大文件下载请求
+app.get('/assets/', (req, res) => {
+    const fileUrl = `https://www.jawon.site${req.url}`;
+    res.redirect(302, fileUrl);
+});
+
+
 /**
  * 设置作为静态资源响应的目录，如果请求路径指向静态资源，
  * 则返回静态资源，否则继续向下寻找对应的路由。
