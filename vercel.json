@@ -11,10 +11,5 @@
             "src": "/(.*)",
             "dest": "index.js"
         }
-    ],
-    
-    "devCommand": "npm run installBlog && npm run buildBlog",
-    "scripts": {
-        "build": "npm run installBlog && npm run buildBlog"
-    }
+    ]
 }
