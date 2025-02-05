@@ -8,5 +8,5 @@
         }
     ],
     
-    "installCommand": "npm run installBlog && npm run buildBlog && node index.js"
+    "buildCommand": "npm run installBlog && npm run buildBlog && node index.js"
 }
