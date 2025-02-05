@@ -1,9 +1,9 @@
 {
   "name": "001",
   "version": "1.0.0",
-  "main": "api/index.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node api/index.js",
+    "start": "node index.js",
     "push": "git add . && git commit -m '1' && git push -f origin main",
     "pull": "git stash && git pull -f origin main && git stash clear"
   },
