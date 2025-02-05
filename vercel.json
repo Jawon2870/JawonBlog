@@ -1,12 +1,18 @@
 {
     "version": 2,
-
+    "builds": [
+        {
+            "src": "index.js",
+            "use": "@now/node",
+            "commands": [
+                "./buildBlog.sh"
+            ]
+        }
+    ],
     "routes": [
         {
             "src": "/(.*)",
             "dest": "index.js"
         }
-    ],
-    
-    "buildCommand": "npm run installBlog && npm run buildBlog && node index.js"
+    ]
 }

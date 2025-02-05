@@ -3,11 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-
+    "blog": "npm run installBlog && npm run buildBlog && node index.js",
     "installBlog": "npm install --prefix Blog",
     "buildBlog": "npm run build --prefix Blog",
-
     "push": "git add . && git commit -m '1' && git push -f origin main",
     "pull": "git stash && git pull -f origin main && git stash clear"
   },
