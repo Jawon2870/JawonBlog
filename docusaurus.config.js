@@ -33,16 +33,17 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,  // 仅文档模式
+        // blog: {
+        //   showReadingTime: true,
+        //   feedOptions: {
+        //     type: ['rss', 'atom'],
+        //     xslt: true,
+        //   },
+        //   onInlineTags: 'warn',
+        //   onInlineAuthors: 'warn',
+        //   onUntruncatedBlogPosts: 'warn',
+        // },
         theme: {
           customCss: [
             './src/css/colors.css',
@@ -77,11 +78,11 @@ const config = {
           label: '笔记',
           to: '/docs',
         },
-        {
-          to: '/blog',
-          label: '博客',
-          position: 'right'
-        },
+        // {
+        //   to: '/blog',
+        //   label: '博客',
+        //   position: 'right'
+        // },
         {
           href: 'https://github.com/Jawon2870/JawonBlog',
           label: 'GitHub',

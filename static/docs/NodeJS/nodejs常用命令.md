@@ -15,19 +15,24 @@ npm init
 # 会创建一个package.json文件，包括名称、版本、作者这些信息等，创建过程一路回车
 ```
 
-### 安装依赖的包
+### 安装包
 
 ```bash
 npm instal
 # 或简写为 npm i，一键安装当前项目中所有的依赖。
 # 后面加上 --save 或 -S 表示把包的信息写入 package.json 中的 dependencies，但不加也会默认写入。
 # 后面加上 --save-dev 或 -D 表示把包的信息写入 package.json 中的 devDependencies
+# 出现版本问题时在后面加 --legacy-peer-deps ，忽略版本问题
 ```
 
-### 查看当前项目依赖的包
+### 查看包
 
 ```bash
+# 查看当前项目的包，简写 npm ls
 npm list
+
+# 查看全局包，简写 npm ls -g
+npm list -g
 ```
 
 ### 删除包
