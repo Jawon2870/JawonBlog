@@ -7,6 +7,7 @@ class Hook {
         return this.hooks.find(hook => hook.object === object && hook.funcName === funcName);
     }
 
+    
     set(object, funcName, before, after) {
         let hook = this.get(object, funcName);
         if (hook) {
