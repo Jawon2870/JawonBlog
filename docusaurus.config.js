@@ -92,7 +92,7 @@ const config = {
     startPath: '/docs/简介',
     footer: {
       style: 'dark',
-      copyright: `Copyright © 2025-1-17 ~ ${new Date().toLocaleDateString().replaceAll('/', '-')}. Build with Docusaurus.`,
+      copyright: `Copyright © 2025-1-17 ~ ${new Date().toLocaleDateString().replaceAll('/', '-')}.`,
     },
     prism: {
       theme: prismThemes.oneLight,
