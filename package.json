@@ -1,25 +1,24 @@
 {
-  "name": "jawon-blog",
+  "name": "my-website",
   "version": "0.0.0",
-  "private": false,
+  "private": true,
   "scripts": {
-    "start": "node scripts/copyDTS.js && docusaurus start",
-    "build": "node scripts/copyDTS.js && docusaurus build",
-    "push": "git add . && git commit -m '1' && git push -f origin main",
-    "pull": "git stash && git pull -f origin main && git stash clear",
     "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+
+    "push": "git add . && git commit -m '1' && git push -f origin main",
+    "pull": "git stash && git pull -f origin main && git stash clear"
   },
   "dependencies": {
     "@docusaurus/core": "3.7.0",
     "@docusaurus/preset-classic": "3.7.0",
-    "@easyops-cn/docusaurus-search-local": "^0.48.0",
-    "@giscus/react": "^3.1.0",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
