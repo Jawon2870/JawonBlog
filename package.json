@@ -6,7 +6,7 @@
     "start": "node scripts/copyDTS.js && docusaurus start",
     "build": "node scripts/copyDTS.js && docusaurus build",
     "push": "git add . && git commit -m '1' && git push -f origin main",
-    "pull": "git stash && git pull -f origin main && git stash clear",
+    "pull": "git reset --hard origin/main && git pull -f origin main",
     "docusaurus": "docusaurus",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
