@@ -58,6 +58,8 @@ class Hook {
             }
             return result;
         };
+        Object.assign(object[funcName], originalFunc);
+        Object.assign(object[funcName].prototype, originalFunc.prototype);
     }
 
     unset(object, funcName) {
