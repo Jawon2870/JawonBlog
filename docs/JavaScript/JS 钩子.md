@@ -60,6 +60,7 @@ class Hook {
         };
         Object.assign(object[funcName], originalFunc);
         Object.assign(object[funcName].prototype, originalFunc.prototype);
+        return object[funcName];
     }
 
     unset(object, funcName) {
@@ -76,6 +77,7 @@ class Hook {
             hook.object[hook.funcName] = hook.originalFunc;
         });
         this.hooks = [];
+        return true;
     }
 }
 ```
