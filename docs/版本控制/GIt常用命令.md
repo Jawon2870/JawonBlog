@@ -27,11 +27,14 @@ git clone <url>
 ## 远程仓库
 
 ```bash
-# 添加一个远程仓库的引用(别名)
+# 添加远程仓库引用(别名)
 git remote add [shortname] [url]
 
-# 删除一个远程仓库的引用(别名)
+# 删除远程仓库引用
 git remote rm [shortname]
+
+# 修改远程仓库引用
+git remote set-url origin [url]
 
 # 显示所有远程仓库
 git remote -v
