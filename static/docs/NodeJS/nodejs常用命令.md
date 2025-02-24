@@ -60,7 +60,7 @@ npm run xxx
 {
   "scripts": {
     "push": "git add . && git commit -m '1' && git push -f origin main",
-    "pull": "git stash && git pull -f origin main && git stash clear",
+    "pull": "git fetch origin main && git reset --hard origin/main",
    }
 }
 ```

@@ -35,17 +35,15 @@ git reset --hard
 
 #### 解决方法：
 
-配置 git 代理（配置成代理工具的地址和端口）
-
+```bash
+# 配置 git 代理（配置成代理工具的地址和端口）
 git config --global http.proxy 127.0.0.1:10809
-
 git config --global https.proxy 127.0.0.1:10809
 
-取消 git 代理
-
+# 取消 git 代理
 git config --global --unset-all http.proxy
-
 git config --global --unset-all https.proxy
+```
 
 ### gitignore 没反应
 

@@ -3,15 +3,16 @@
 ## 配置
 
 ```bash
-# 配置提交代码时的用户信息，用户名和邮箱
+# 配置用户名、邮箱和密码(或token)
 git config --global user.name "yourName"
 git config --global user.email "123@qq.com"
+git config --global user.password "密码或token"
 
 # 查看配置信息，有时需要点击 q 退出
 git config --list
 ```
 
-## 本地仓库
+## 创建仓库
 
 ```bash
 # 在当前目录创建本地仓库
@@ -26,11 +27,14 @@ git clone <url>
 ## 远程仓库
 
 ```bash
-# 添加一个远程仓库的引用(别名)
+# 添加远程仓库引用(别名)
 git remote add [shortname] [url]
 
-# 删除一个远程仓库的引用(别名)
-git remote rm [shortname] [url]
+# 删除远程仓库引用
+git remote rm [shortname]
+
+# 修改远程仓库引用
+git remote set-url origin [url]
 
 # 显示所有远程仓库
 git remote -v
