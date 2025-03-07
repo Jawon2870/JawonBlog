@@ -4,7 +4,7 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: '嘻嘻',
+    title: 'no error',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
@@ -13,7 +13,7 @@ const FeatureList = [
     ),
   },
   {
-    title: '哈哈',
+    title: 'no warning',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
@@ -22,11 +22,11 @@ const FeatureList = [
     ),
   },
   {
-    title: '哼哼',
+    title: 'no bug',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        哼哼哼哼哼哼哼哼
+        嘻嘻嘻嘻哈哈哈哈
       </>
     ),
   },
