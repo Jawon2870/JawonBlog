@@ -1,4 +1,4 @@
-# GIt相关问题
+# GIt常见问题
 
 ### git pull 拉取冲突
 
@@ -31,18 +31,26 @@ git reset --hard
 
 网络状态：已开启 v2ray 代理，能正常访问google
 
-问题：执行 git clone 或 git push 失败，提示无法访问（fatal: unable to access）。
+问题：访问 github 失败，提示 fatal: unable to access...
 
 #### 解决方法：
 
+可以尝试配置或取消git的代理，根据所用代理工具的不同，ip和端口会有所差异。
+
 ```bash
-# 配置 git 代理（配置成代理工具的地址和端口）
+# 配置 git 代理
+git --global http.proxy 127.0.0.1:10809
+git --global https.proxy 127.0.0.1:10809
+# 或
 git config --global http.proxy 127.0.0.1:10809
 git config --global https.proxy 127.0.0.1:10809
 
 # 取消 git 代理
 git config --global --unset-all http.proxy
 git config --global --unset-all https.proxy
+# 或
+git config --unset-all http.proxy
+git config --unset-all https.proxy
 ```
 
 ### gitignore 没反应

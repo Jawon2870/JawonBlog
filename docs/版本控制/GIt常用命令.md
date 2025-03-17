@@ -106,6 +106,8 @@ git commit --amend -m [message]
 # 重做上一次commit，并包括指定文件的新变化
 git commit --amend [file1] [file2] ...
 
+# 查看历史提交
+git log
 
 # 暂存更改
 git stash
@@ -119,12 +121,12 @@ git stash apply [stash{n}]
 git stash drop [stash@{1}]
 # 清空暂存
 git stash clear
+
 ```
 
 ## 分支
 
 ```bash
-
 # 列出所有本地分支
 git branch
 
@@ -145,6 +147,12 @@ git branch [branch] [commit]
 
 # 新建一个分支，与指定的远程分支建立追踪关系
 git branch --track [branch] [remote-branch]
+
+# 强制重置当前分支，放弃更改
+git reset --hard
+
+# 强制重置当前分支到指定的提交，放弃更改
+git reset --hard <commit>
 
 # 切换到指定分支，并更新工作区
 git checkout [branch-name]
