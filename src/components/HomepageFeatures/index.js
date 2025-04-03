@@ -4,30 +4,24 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'no error',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        嘻嘻嘻嘻嘻嘻嘻嘻
-      </>
-    ),
-  },
-  {
-    title: 'no warning',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        哈哈哈哈哈哈哈哈
-      </>
-    ),
-  },
-  {
-    title: 'no bug',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'no error',
     description: (
-      <>
-        嘻嘻嘻嘻哈哈哈哈
-      </>
+      <></>
+    ),
+  },
+  {
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'no warning',
+    description: (
+      <></>
+    ),
+  },
+  {
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'no bug',
+    description: (
+      <></>
     ),
   },
 ];
