@@ -1,4 +1,4 @@
-## 劫持并修改https响应体(一)
+# 劫持并修改https响应体（1）
 
 ### 需求
 
@@ -128,6 +128,5 @@ let rules = [
 //     });
 // }
 ```
-
 
 后期我又发现了一个实现修改响应体的浏览器插件 [ModResponse](https://chromewebstore.google.com/detail/modresponse-mock-and-repl/bbjcdpjihbfmkgikdkplcalfebgcjjpm?src=modheader-com)，他是基于[ chrome.debugger api](https://developer.chrome.com/docs/extensions/reference/debugger/) 实现的。
