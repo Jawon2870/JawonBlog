@@ -18,7 +18,7 @@
 
 [Chrome 浏览器官方已经给出确定的时间来弃用 V2 版本的插件了](https://zhuanlan.zhihu.com/p/677476234)
 
-![1744772819259](https://file+.vscode-resource.vscode-cdn.net/d%3A/projects/JawonBlog/docs/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E5%8A%AB%E6%8C%81%E5%B9%B6%E4%BF%AE%E6%94%B9https%E5%93%8D%E5%BA%94%E4%BD%93/image/%E5%8A%AB%E6%8C%81%E5%B9%B6%E4%BF%AE%E6%94%B9https%E5%93%8D%E5%BA%94%E4%BD%93(%E4%B8%80)/1744772819259.png)
+![1744772819259](image\劫持并修改https响应体(一)\1744772819259.png)
 
 因此这个 api 显然不是一个长久之计！！！
 
