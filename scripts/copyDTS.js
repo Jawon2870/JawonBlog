@@ -45,5 +45,3 @@ function copyFolderSync(src, dest) {
 }
 
 copyFolderSync(sourceFolder, destinationFolder);
-
-
