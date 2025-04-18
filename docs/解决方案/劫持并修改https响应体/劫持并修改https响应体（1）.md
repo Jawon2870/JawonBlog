@@ -24,7 +24,7 @@
 
 经过一番查阅，发现谷歌扩展 mv3 版本中提供了 [chrome.declarativeNetRequest ](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest?hl=zh_cn)api 来修改网络请求。
 
-又经过几天的查阅尝试，发现这个 api 只能对请求进行重定向、修改响应头、请求头等操作，并不具备修改响应体的能力，因此浏览器插件方案要暂时放一放了。
+又经过几天的查阅和尝试，发现这个 api 只能对请求进行重定向、修改响应头、请求头等操作，并不具备修改响应体的能力，因此浏览器插件方案要暂时放一放了。
 
 ### 相关代码
 
@@ -128,5 +128,3 @@ let rules = [
 //     });
 // }
 ```
-
-后期我又发现了一个实现修改响应体的浏览器插件 [ModResponse](https://chromewebstore.google.com/detail/modresponse-mock-and-repl/bbjcdpjihbfmkgikdkplcalfebgcjjpm?src=modheader-com)，他是基于[ chrome.debugger api](https://developer.chrome.com/docs/extensions/reference/debugger/) 实现的。

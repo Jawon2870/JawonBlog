@@ -82,8 +82,135 @@ app.on('window-all-closed', function () {
 
 我又陷入了沉思，那怎么办呢，使用 chromium 源码重编译一款符合需求的浏览器？查了一下编译一次需要 3~6 小时，搞不了一点啊！
 
-那重编译一款 electron 呢？查了下好像也不太好搞，搞不好又是一条不归路！
+那 [重编译一款 electron](https://blog.csdn.net/epubcn/article/details/136021220) 呢？看了下，也是一堆坑，而且同样编译一次需要几小时，搞不好又是一条不归路！
 
-### debugger
+### Chrome.debugger
 
-后来，在我发现了这个个可以修改响应体的浏览器插件 [ModResponse](https://chromewebstore.google.com/detail/modresponse-mock-and-repl/bbjcdpjihbfmkgikdkplcalfebgcjjpm?src=modheader-com)（基于[ chrome.debugger api](https://developer.chrome.com/docs/extensions/reference/debugger/)）之后，结合前面对 electron 的了解，我发现 electron 和浏览器扩展的 webRequest 下面的 api 很类似，那么 electron 是不是也有 debugger api 呢？如果是，那么我更倾向与使用 electron 开发，因为他的功能比浏览器扩展更强大。
+后来，在我发现了这一个可以修改响应体的浏览器插件 [ModResponse](https://chromewebstore.google.com/detail/modresponse-mock-and-repl/bbjcdpjihbfmkgikdkplcalfebgcjjpm?src=modheader-com)（基于[ chrome.debugger api](https://developer.chrome.com/docs/extensions/reference/debugger/)），结合前面对 electron 的了解，我发现 electron 也有 debugger api。
+
+于是我开始在 electron 中尝试使用 debugger 劫持并修改响应体，经过不断尝试，我做到了，代码如下
+
+```js
+// main.js
+
+import { app, BrowserWindow, session, net } from 'electron';
+import { SetNetHookForWindow } from './Hook/hook.js';
+
+app.whenReady().then(async () => {
+    // 清除缓存
+    await session.defaultSession.clearCache();
+
+    let mainWindow = new BrowserWindow({
+        width: 1200,
+        height: 800,
+        webPreferences: {
+            nodeIntegration: true,
+            webSecurity: false
+        }
+    });
+
+    // let url = '某目标网站';
+    let url = 'https://www.baidu.com/';
+    // let url = 'https://github.com/';
+
+    SetNetHookForWindow(mainWindow, url)
+
+    mainWindow.loadURL(url);
+});
+```
+
+```js
+// Hook.js
+import fs from 'fs';
+
+export { SetNetHookForWindow };
+
+
+function ModifyBody(body) {
+    let bodyText = atob(body);
+    let modifiedBody = bodyText.replace(/<title>.+?<\/title>/i, '<title>哈哈哈</title>');
+
+    // 本地保存修改后的响应体
+    fs.writeFileSync('HookedBody.html', modifiedBody);
+
+    return modifiedBody;
+}
+
+
+function SetNetHookForWindow(targetWindow, targetURL) {
+    const debuggerInstance = targetWindow.webContents.debugger;
+    try {
+        // 不指定 attach 版本，让 Electron 自动选择
+        debuggerInstance.attach();
+        console.log('[Hook] Debugger attached');
+    }
+    catch (err) {
+        console.log('[Hook] Debugger attach failed: ', err);
+    }
+
+    // 启用网络调试
+    debuggerInstance.sendCommand('Network.enable');
+
+    // 启用请求拦截，设置模式为 HeadersReceived
+    debuggerInstance.sendCommand('Network.setRequestInterception', {
+        patterns: [
+            {
+                urlPattern: targetURL,
+                resourceType: 'Document',
+                interceptionStage: 'HeadersReceived'
+            }
+        ]
+    });
+
+    // 监听请求拦截事件
+    debuggerInstance.on('message', async (event, method, params) => {
+
+        if (params.request?.url !== targetURL) return;
+
+        console.log('[Hook] url: ' + params.request.url);
+
+        const interceptionId = params.interceptionId;
+
+        console.log('[Hook] interceptionId: ', interceptionId);
+
+         // 获取响应头
+         const headers = params.responseHeaders || {};
+         console.log('[Hook] headers: ', headers);
+
+        try {
+            // 获取响应体
+            const { body } = await debuggerInstance.sendCommand(
+                'Network.getResponseBodyForInterception',
+                { interceptionId }
+            );
+
+            // 修改响应体
+            const modifiedBody = ModifyBody(body);
+
+            // 构建包含响应头和响应体的 base64 完整响应
+            const base64Response = Buffer.from(
+                'HTTP/1.1 200 OK\n' +
+                'Content-Type: text/html; charset=utf-8\n' +
+                'Content-Length: ' + Buffer.byteLength(modifiedBody) +
+                '\n\n' +
+                modifiedBody
+            ).toString('base64');
+
+            // 使用 Network.continueInterceptedRequest 修改响应体
+            await debuggerInstance.sendCommand('Network.continueInterceptedRequest', {
+                interceptionId,
+                rawResponse: base64Response
+            });
+        }
+        catch (error) {
+            console.error('[Hook] Modification failed: ', error);
+        }
+    });
+}
+```
+
+使用上面的代码，成功修改了百度的标题，于是我立马开始测试目标网站，真不错，也成功了，正当我满心欢喜，开始幻想可以任意修改 html 中的 CSP 时，md，忽然失效了，真的忽然失效了，我没有改动任何代码，但他就是失效了，而且就再也没有生效过，md，md！！！
+
+我怀疑过时缓存问题，我使用各种方法清除了缓存，依然无效，但当我切换回百度，立马生效，那说明这个方法对于我目标网站是无效的。
+
+废了，另谋出路吧！
