@@ -21,3 +21,9 @@ npm config delete https-proxy
 解决方法：在控制面板->网络和 Internet->网络连接中，双击正在使用的网卡，之后在属性中取消 IPv6
 
 ![img](image/nodejs相关问题/1736737335800.png)
+
+---
+
+创建时间：2025年1月22日
+
+更新时间：2025年1月23日

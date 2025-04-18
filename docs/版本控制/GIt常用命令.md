@@ -1,4 +1,4 @@
-# GIt常用命令总结
+# GIt常用命令
 
 ## 配置
 
@@ -176,3 +176,10 @@ git branch -d [branch-name]
 git push origin --delete [branch-name]
 git branch -dr [remote/branch]
 ```
+
+
+---
+
+创建时间：2025年1月23日
+
+更新时间：2025年2月3日

@@ -1,4 +1,4 @@
-# 劫持并修改https响应体（2）
+# 劫持并修改https响应体（二）
 
 ### Hook windows API
 
@@ -351,3 +351,9 @@ bool InjectDLLByPID(DWORD dwProcessId, const char* dllPath) {
 ![1744780203865](image/劫持并修改https响应体(二)/1744780203865.png)
 
 好吧，此时的我已经不想继续折腾了，继续下去会出人命的，这个方案暂时放一放。
+
+---
+
+创建时间：2025年4月12日
+
+更新时间：2025年4月12日

@@ -1,5 +1,9 @@
 # 劫持并修改https响应体（1）
 
+---
+date: 2021-09-13T10:00
+---
+
 ### 需求
 
 对某个网站进行逆向的过程中，遇到了 CSP 限制，CSP 限制让人非常不爽，通过 [simple-modify-headers ](https://microsoftedge.microsoft.com/addons/detail/simplemodifyheaders/nmjjhcnkglmnieepjlgodcaebeigppjh) 浏览器插件可以很好地去除响应头中的 CSP 限制。但是，页面返回的 html 中仍然包含带有 CSP 的 meta 标签。
@@ -18,13 +22,13 @@
 
 [Chrome 浏览器官方已经给出确定的时间来弃用 V2 版本的插件了](https://zhuanlan.zhihu.com/p/677476234)
 
-![1744772819259](https://file+.vscode-resource.vscode-cdn.net/d%3A/projects/JawonBlog/docs/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E5%8A%AB%E6%8C%81%E5%B9%B6%E4%BF%AE%E6%94%B9https%E5%93%8D%E5%BA%94%E4%BD%93/image/%E5%8A%AB%E6%8C%81%E5%B9%B6%E4%BF%AE%E6%94%B9https%E5%93%8D%E5%BA%94%E4%BD%93(%E4%B8%80)/1744772819259.png)
+![1744772819259](image\劫持并修改https响应体(一)\1744772819259.png)
 
 因此这个 api 显然不是一个长久之计！！！
 
 经过一番查阅，发现谷歌扩展 mv3 版本中提供了 [chrome.declarativeNetRequest ](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest?hl=zh_cn)api 来修改网络请求。
 
-又经过几天的查阅尝试，发现这个 api 只能对请求进行重定向、修改响应头、请求头等操作，并不具备修改响应体的能力，因此浏览器插件方案要暂时放一放了。
+又经过几天的查阅和尝试，发现这个 api 只能对请求进行重定向、修改响应头、请求头等操作，并不具备修改响应体的能力，因此浏览器插件方案要暂时放一放了。
 
 ### 相关代码
 
@@ -128,5 +132,3 @@ let rules = [
 //     });
 // }
 ```
-
-后期我又发现了一个实现修改响应体的浏览器插件 [ModResponse](https://chromewebstore.google.com/detail/modresponse-mock-and-repl/bbjcdpjihbfmkgikdkplcalfebgcjjpm?src=modheader-com)，他是基于[ chrome.debugger api](https://developer.chrome.com/docs/extensions/reference/debugger/) 实现的。

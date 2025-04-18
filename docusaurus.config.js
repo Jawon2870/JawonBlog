@@ -8,6 +8,8 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+let date = new Date();
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Jawon's blog",
@@ -93,7 +95,7 @@ const config = {
     startPath: '/docs/简介',
     footer: {
       style: 'dark',
-      copyright: `Copyright © 2025-1-17 ~ ${new Date().toLocaleDateString().replaceAll('/', '-')}.`,
+      copyright: `Copyright © .  Website create at: 2025-1-17. Last Update: ${new Intl.DateTimeFormat('zh-CN', {timeZone: 'Asia/Shanghai'}).format(new Date()).replaceAll("/", "-")}`,
     },
     prism: {
       theme: prismThemes.oneLight,
