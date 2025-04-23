@@ -37,8 +37,8 @@ git reset --hard
 
 ```bash
 # 配置 git 代理
-git --global http.proxy 127.0.0.1:10809
-git --global https.proxy 127.0.0.1:10809
+git config http.proxy 127.0.0.1:10809
+git config https.proxy 127.0.0.1:10809
 # 或
 git config --global http.proxy 127.0.0.1:10809
 git config --global https.proxy 127.0.0.1:10809
