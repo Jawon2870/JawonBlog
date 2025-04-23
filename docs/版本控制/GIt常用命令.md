@@ -7,7 +7,7 @@
 git config --global user.name "yourName"
 git config --global user.email "123@qq.com"
 git config --global user.password "密码或token"
-
+ 
 # 查看配置信息，有时需要点击 q 退出
 git config --list
 ```
