@@ -20,8 +20,9 @@ git config --list
 #注释
 *.txt		忽略所有 .txt 后缀的文件
 !src.a          忽略除 src.a 外的其他文件
-/todo           仅忽略项目根目录下的 todo 文件，不包括 src/todo
-build/          忽略所有 build 目录下的所有文件，过滤整个build文件夹；
+dist		忽略所有名为 dist 的文件和目录
+/dist           仅忽略根目录下的 dist 目录
+build/          忽略所有 build 目录下的所有文件，过滤整个build文件夹
 doc/*.txt       忽略 doc 目录下所有 .txt 后缀的文件，但不包括 doc 子目录的 .txt 的文件
  
 bin/:           忽略当前路径下的 bin 文件夹，该文件夹下的所有内容都会被忽略，不忽略 bin 文件
