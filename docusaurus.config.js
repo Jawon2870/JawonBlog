@@ -8,7 +8,8 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
-let date = new Date();
+let date = new Intl.DateTimeFormat('zh-CN', { timeZone: 'Asia/Shanghai' })
+  .format(new Date()).replaceAll("/", "-");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -55,7 +56,7 @@ const config = {
       }),
     ],
   ],
-  
+
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   themeConfig: {
     colorMode: {
@@ -95,7 +96,7 @@ const config = {
     startPath: '/docs/简介',
     footer: {
       style: 'dark',
-      copyright: `Copyright © .  Website create at: 2025-1-17. Last Update: ${new Intl.DateTimeFormat('zh-CN', {timeZone: 'Asia/Shanghai'}).format(new Date()).replaceAll("/", "-")}`,
+      copyright: `Powered by docusaurus | Create at: 2025-1-17. Last Update: ${date}`,
     },
     prism: {
       theme: prismThemes.oneLight,
