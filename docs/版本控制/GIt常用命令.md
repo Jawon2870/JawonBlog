@@ -14,30 +14,22 @@ git config --list
 
 ## .gitignore
 
-通过仓库根目录下的 .gitignore 文件来让 git 忽略上传指定的文件或目录。
+仓库根目录下的 .gitignore 文件可以使 git 忽略指定的文件或目录，被忽略的目录将不会被 git 控制。
+
+![1745993803744](image/GIt常用命令/1745993803744.bmp)
+
+例如：
 
 ```bash
 #注释
 *.txt		忽略所有 .txt 后缀的文件
-!src.a          忽略除 src.a 外的其他文件
+!src.a          忽略除 src.a 之外的其他文件
 dist		忽略所有名为 dist 的文件和目录
-/dist           仅忽略根目录下的 dist 目录
-build/          忽略所有 build 目录下的所有文件，过滤整个build文件夹
+/dist           斜杠在开头，表示仅忽略 .gitignore 所在目录下名为 dist 的文件或文件夹
+dist/           斜杠在末尾，表示仅忽略名为 dist 的目录，而不会忽略名为 dist 的文件
+/dist/		仅忽略 .gitignore 所在目录下名为 dist 的文件夹
 doc/*.txt       忽略 doc 目录下所有 .txt 后缀的文件，但不包括 doc 子目录的 .txt 的文件
- 
-bin/:           忽略当前路径下的 bin 文件夹，该文件夹下的所有内容都会被忽略，不忽略 bin 文件
-/bin:           忽略根目录下的 bin 文件
-/*.c:           忽略 cat.c，不忽略 build/cat.c
-debug/*.obj:    忽略debug/io.obj，不忽略 debug/common/io.obj和tools/debug/io.obj
-**/foo:         忽略/foo, a/foo, a/b/foo等
-a/**/b:         忽略a/b, a/x/b, a/x/y/b等
-!/bin/run.sh    不忽略bin目录下的run.sh文件
-*.log:          忽略所有 .log 文件
-config.js:      忽略当前路径的 config.js 文件
- 
-/mtk/           忽略整个文件夹
-*.zip           忽略所有.zip文件
-/mtk/do.c       忽略某个具体文件
+/dir1/dir2/text.txt       忽略具体某个文件
 ```
 
 ## 创建仓库
