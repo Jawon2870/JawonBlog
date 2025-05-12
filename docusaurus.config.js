@@ -91,6 +91,11 @@ const config = {
           label: 'GitHub',
           position: 'right',
         },
+        {
+          href: 'https://www.jawon.site/JSConvertTool.html',
+          label: 'JS转换工具',
+          position: 'right',
+        },
       ],
     },
     startPath: '/docs/简介',
