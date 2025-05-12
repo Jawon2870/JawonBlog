@@ -1,15 +1,35 @@
-# GIt常用命令总结
+# GIt常用命令
 
-## 配置
+## Git账户配置
 
 ```bash
 # 配置用户名、邮箱和密码(或token)
 git config --global user.name "yourName"
 git config --global user.email "123@qq.com"
 git config --global user.password "密码或token"
-
+ 
 # 查看配置信息，有时需要点击 q 退出
 git config --list
+```
+
+## .gitignore
+
+仓库根目录下的 .gitignore 文件可以使 git 忽略指定的文件或目录，被忽略的目录将不会被 git 控制。
+
+![1745993803744](image/GIt常用命令/1745993803744.bmp)
+
+例如：
+
+```bash
+#注释
+*.txt		忽略所有 .txt 后缀的文件
+!src.a          忽略除 src.a 之外的其他文件
+dist		忽略所有名为 dist 的文件和目录
+/dist           斜杠在开头，表示仅忽略 .gitignore 所在目录下名为 dist 的文件或文件夹
+dist/           斜杠在末尾，表示仅忽略名为 dist 的目录，而不会忽略名为 dist 的文件
+/dist/		仅忽略 .gitignore 所在目录下名为 dist 的文件夹
+doc/*.txt       忽略 doc 目录下所有 .txt 后缀的文件，但不包括 doc 子目录的 .txt 的文件
+/dir1/dir2/text.txt       忽略具体某个文件
 ```
 
 ## 创建仓库
@@ -176,3 +196,9 @@ git branch -d [branch-name]
 git push origin --delete [branch-name]
 git branch -dr [remote/branch]
 ```
+
+---
+
+创建时间：2025年1月23日
+
+更新时间：2025年2月3日

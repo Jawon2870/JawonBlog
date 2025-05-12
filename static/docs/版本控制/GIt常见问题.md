@@ -37,8 +37,8 @@ git reset --hard
 
 ```bash
 # 配置 git 代理
-git --global http.proxy 127.0.0.1:10809
-git --global https.proxy 127.0.0.1:10809
+git config http.proxy 127.0.0.1:10809
+git config https.proxy 127.0.0.1:10809
 # 或
 git config --global http.proxy 127.0.0.1:10809
 git config --global https.proxy 127.0.0.1:10809
@@ -92,3 +92,9 @@ git reflog --no-abbrev
 如下图，可以看到每次 HEAD 移动的 id，找到最新提交的id，再使用 git reset 命令就可以重置回去啦。
 
 ![1742178909099](image/GIt常见问题/1742178909099.png)
+
+---
+
+创建时间：2025年1月24日
+
+更新时间：2025年2月15日
