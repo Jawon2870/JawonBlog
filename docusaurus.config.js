@@ -92,7 +92,7 @@ const config = {
           position: 'right',
         },
         {
-          href: 'https://www.jawon.site/JSConvertTool.html',
+          href: 'https://www.jawon.site/pages/JSConvertTool.html',
           label: 'JS转换工具',
           position: 'right',
         },
