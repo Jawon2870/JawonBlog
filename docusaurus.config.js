@@ -16,7 +16,7 @@ const config = {
   title: "Jawon's blog",
   tagline: 'Welcome!',
   favicon: 'img/favicon.png',
-  url: 'https://www.Jawon.site',
+  url: 'https://jawon.netlify.app',
   baseUrl: '/',
 
   onBrokenLinks: 'throw',
@@ -92,7 +92,7 @@ const config = {
           position: 'right',
         },
         {
-          href: 'https://www.jawon.site/pages/JSConvertTool.html',
+          href: 'https://jawon.netlify.app/pages/JSConvertTool.html',
           label: 'JS转换工具',
           position: 'right',
         },
