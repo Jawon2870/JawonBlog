@@ -5,9 +5,6 @@ import DocItemMetadata from '@theme/DocItem/Metadata';
 import DocItemLayout from '@theme/DocItem/Layout';
 import type { Props } from '@theme/DocItem';
 
-// 添加评论组件
-import GiscusComments from '../../components/GiscusComments';
-
 export default function DocItem(props: Props): ReactNode {
   const docHtmlClassName = `docs-doc-id-${props.content.metadata.id}`;
   const MDXComponent = props.content;
@@ -17,7 +14,6 @@ export default function DocItem(props: Props): ReactNode {
         <DocItemMetadata />
         <DocItemLayout>
           <MDXComponent />
-          <GiscusComments />
         </DocItemLayout>
       </HtmlClassNameProvider>
     </DocProvider>

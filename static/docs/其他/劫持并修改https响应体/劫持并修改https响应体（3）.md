@@ -216,7 +216,3 @@ function SetNetHookForWindow(targetWindow, targetURL) {
 废了，另谋出路吧！
 
 ---
-
-创建时间：2025年4月16日
-
-更新时间：2025年4月16日

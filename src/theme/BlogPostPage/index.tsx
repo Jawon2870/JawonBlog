@@ -15,8 +15,6 @@ import ContentVisibility from '@theme/ContentVisibility';
 import type { Props } from '@theme/BlogPostPage';
 import type { BlogSidebar } from '@docusaurus/plugin-content-blog';
 
-// 添加评论组件
-import GiscusComments from '../../components/GiscusComments';
 
 function BlogPostPageContent({
   sidebar,
@@ -52,7 +50,6 @@ function BlogPostPageContent({
         <BlogPostPaginator nextItem={nextItem} prevItem={prevItem} />
       )}
 
-      <GiscusComments />
     </BlogLayout>
   );
 }
