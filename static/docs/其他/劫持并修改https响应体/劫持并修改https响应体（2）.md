@@ -6,7 +6,9 @@
 
 ### Detours 库
 
-经过一番查阅，决定尝试使用 [Detours](https://github.com/microsoft/Detours) 库来对 windows 网络相关 api 进行 hook。
+经过一番查阅，决定尝试使用 [Detours](https://github.com/microsoft/Detours) 库来对 windows 网络相关 api 进行 hook。 
+
+Detours 库的安装方法可参考这篇文章：[微软开源HOOK框架 Detours使用方法 -bilibili](https://www.bilibili.com/opus/904922246034751491) 按照文章中的步骤配置完之后，如果仍然提示找不到 Detours，把x86和x64编译模式切换一下就好了。
 
 经过一番尝试，无数次的 debug，成功 hook 了 自己 demo 中的 MessageBoxA 函数
 

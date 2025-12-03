@@ -35,6 +35,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          showLastUpdateTime: true,
         },
         blog: false,  // 仅文档模式
         // blog: {
