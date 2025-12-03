@@ -23,7 +23,3 @@ npm config delete https-proxy
 ![img](image/nodejs相关问题/1736737335800.png)
 
 ---
-
-创建时间：2025年1月22日
-
-更新时间：2025年1月23日

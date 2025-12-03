@@ -76,8 +76,3 @@ FLUSH PRIVILEGES;
 -- 查看用户权限
 SHOW GRANTS FOR 'psl'@'%';
 ```
-
-
-创建时间：2025年12月3日
-
-更新时间：2025年12月3日

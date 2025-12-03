@@ -1,6 +1,6 @@
 # Hexo+Gitee pages免费部署博客（已弃用）
 
-`<mark>`本文方案已弃用`</mark>`，请移步至新的解决方案：[docusaurus+github+vercel免费部署博客](docusaurus+github+vercel免费部署博客)。
+`<mark>`本文方案已弃用 `</mark>`，请移步至新的解决方案：[docusaurus+github+vercel免费部署博客](docusaurus+github+vercel免费部署博客)。
 
 之前选择本文中的方案，源于以下优点：
 
@@ -44,7 +44,3 @@ UP主"DID 迪"的[视频教程](https://www.bilibili.com/video/BV1Eg41157tL/?spm
 ![1736848338224](image/Hexo+Giteepages免费部署博客(已弃用)/1736848338224.gif)
 
 ---
-
-创建时间：2025年1月21日
-
-更新时间：2025年1月21日
