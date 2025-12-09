@@ -1,5 +1,5 @@
 /**
- * node scripts/copyDTS.js（copy docs folder to static）
+ * node scripts/copyDTS.js（copy docs folder to static/docs folder）
 */
 
 const fs = require('fs');

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>简单的JS转换工具</title>
+    <title>JS 转换工具</title>
     <link rel="icon" href="https://www.txttool.com/favicon.ico">
     <style>
         /* 全局样式 */
@@ -116,10 +116,10 @@
 </head>
 
 <body>
-    <h1>简单的 JS 转换工具</h1>
+    <h1>JS 转换工具</h1>
     <div class="container">
         <div class="tool conversion-js-to-string">
-            <h2>JS转字符串</h2>
+            <h2>JS 转字符串</h2>
             <textarea class="inputText" spellcheck="false" placeholder="请输入JS代码"></textarea>
             <button class="copyBtn" onclick="convertJSToStringAndCopy()">转换并复制</button>
             <textarea class="result" readonly></textarea>
@@ -137,7 +137,7 @@
             <textarea class="result" readonly></textarea>
         </div>
         <div class="tool conversion-js-to-eval-encrypt">
-            <h2>一键eval加密JS</h2>
+            <h2>一键 eval 加密 JS</h2>
             <select class="depth-select" id="depthSelect">
                 <option value="1">1层</option>
                 <option value="2">2层</option>
@@ -201,7 +201,9 @@
             text = escapeRegExpSpecialCharacters(text);
             text = replaceMangledNames(text);
             text = escapeDollars(text);
-            return RegExp(text);
+            let regExp = RegExp(text).toString();
+            regExp = regExp.replace(/^\/|\/$/g, "");
+            return regExp;
         }
 
         function convertJSToRegexAndCopy() {

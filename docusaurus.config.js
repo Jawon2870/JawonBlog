@@ -75,13 +75,6 @@ const config = {
       },
       hideOnScroll: true,
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'right',
-          label: '笔记',
-          to: '/docs',
-        },
         // {
         //   to: '/blog',
         //   label: '博客',
