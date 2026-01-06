@@ -59,8 +59,21 @@ cat fileName
 # 创建文件
 touch fileName
 
+# 创建文件夹
+mkdir folderName
+
 # 修改文件，ctrl+o, enter 保存修改, ctrl+x 退出编辑
 nano filename
+
+# 以下命令中：
+# -r 递归，操作文件夹时使用
+# -f 强制覆盖
+
+# 复制文件/文件夹
+cp src des
+
+# 移动或重命名文件/文件夹
+mv src des
 ```
 
 ### 文件传输
