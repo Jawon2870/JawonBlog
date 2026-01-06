@@ -3,6 +3,14 @@
 ### 查看系统信息
 
 ```bash
+# 查看内网 ip 地址，通常在 eth0/ens33/enp0s3 等物理网卡下
+ip addr
+
+# 获取当前机器的公网 ip 地址，原理是访问第三方ip查询网站，获取返回结果，下面是三个例子
+curl ipinfo.io/ip
+curl icanhazip.com
+curl ifconfig.me
+
 # 查看磁盘空间使用情况（单位 GB，方便阅读）
 # -h：以人类可读方式显示
 df -h
