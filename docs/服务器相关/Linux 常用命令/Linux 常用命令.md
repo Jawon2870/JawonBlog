@@ -111,6 +111,11 @@ tmux attach -t s001
 
 # 查看所有会话窗口
 tmux ls
+
+# 将当前会话的日志输出到文件（先进入会话，在会话内执行）
+tmux pipe-pane -o 'sed -u "s/\x1B\[[0-9;?]*[A-Za-z]//g" >> log.txt'
+# 停止输出到文件（也要在会话内执行）
+tmux pipe-pane
 ```
 
 ### Node.js / npm 的安装问题
