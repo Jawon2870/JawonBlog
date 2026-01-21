@@ -23,6 +23,9 @@ top
 # 或者使用 htop（需要安装：sudo apt install htop -y）
 htop
 
+# 查看当前文件夹及当前目录下的文件夹的大小
+du -h
+
 # 查看所有进程占用的内存并按大小排序
 ps aux --sort=-rss
 # 命令解释：
