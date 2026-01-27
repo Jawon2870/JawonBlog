@@ -205,7 +205,6 @@ docker exec -it name_database mysql -uroot -p
 ### 服务管理
 
 ```bash
-
 # 案例：创建一个开机自启，意外终止后会自动重启的 Node.js 服务
 # 在 /etc/systemd/system 创建 service 文件
 sudo nano /etc/systemd/system/my-node-app.service
@@ -245,4 +244,7 @@ kill -9 <pid>
 
 # 查看服务状态，将会输出 Active: active (running)
 systemctl status my-node-app
+
+# 查看当前正在运行的服务
+systemctl list-units --type=service --state=running
 ```
