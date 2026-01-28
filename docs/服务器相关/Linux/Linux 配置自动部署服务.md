@@ -1,4 +1,4 @@
-# Linux 自动部署
+# Linux 配置自动部署服务
 
 ### 效果
 
@@ -10,7 +10,7 @@
 
 ### 避坑
 
-不能直接在自身服务中创建子进程去执行重新部署程序，因为重新部署程序需要先终止服务进程，然后再拉取新代码，这样才能保证新代码正常覆盖旧代码，否则旧代码被服务进程占用，无法被修改。但是，由于重新部署的进程属于服务进程的子进程，终止服务进程将同时终止部署进程，导致后续拉取代码等操作无法完成。
+不能直接在自身服务中创建子进程去执行重新部署程序，因为重新部署程序需要重启服务进程，但由于服务进程是他的父进程，这样就会把自己也给终止掉，部署进程无法完成。
 
 ### 正确实现
 
@@ -22,9 +22,19 @@
 2. 填写一个 token 用于验证
 3. 选择触发器为 push
 
-#### Linux 端：
+#### Linux 服务器端：
 
-注册另一个专门用于更新部署的服务，内容如下，具体创建步骤请移步本目录下的《Linux 常用命令》
+先在某个位置放一个包含重新部署命令的 sh 脚本文件
+
+```bash
+cd /home/ubuntu/my-server/
+sudo systemctl stop my-server
+sudo -u ubuntu npm run pull
+sudo -u ubuntu npm install
+sudo systemctl start my-server
+```
+
+注册一个专门用于更新部署的服务，该服务每次执行后自动结束，具体创建步骤参考本目录下的《Linux 常用命令》
 
 ```
 [Unit]
@@ -36,8 +46,6 @@ Type=oneshot
 User=root
 ExecStart=/bin/bash /home/ubuntu/pawsome-server/scripts/deploy.sh
 ```
-
-以上部署服务每次启动后将仅执行一次，之后自动结束。
 
 #### 后端接口：
 

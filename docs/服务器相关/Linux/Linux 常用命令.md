@@ -70,8 +70,11 @@ touch fileName
 # 创建文件夹
 mkdir folderName
 
-# 修改文件，ctrl+o, enter 保存修改, ctrl+x 退出编辑
+# 修改文件, 使用 nano
 nano filename
+# nano 相关用法：
+# ctrl+6 设置光标锚点, 之后使用上下键可以选中多行文本，之后 ctrl+k 切除
+# ctrl+o 之后 enter 确认保存修改, 之后 ctrl+x 退出编辑
 
 # 以下命令中：
 # -r 递归，操作文件夹时使用
